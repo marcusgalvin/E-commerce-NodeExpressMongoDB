@@ -1,0 +1,169 @@
+#form-container {
+text-align: center
+}
+
+#header {
+    text-align: center;
+}
+#name{
+    color:red;
+}
+
+#output {
+    border: 1px solid red;
+  border-radius: 12px;
+}
+
+#viewall {
+    text-align: center;
+}
+
+
+h2 {
+    text-align: center
+}
+
+@import "compass/css3";
+
+$padding-horizontal:20px;
+$highlight-color:#16abf0;
+body{
+  background:#34495e;
+  color:white;
+  text-align:center;
+  font-family:Helvetica, Arial, sans-serif;
+  font-size:10pt;
+}
+h1{
+  font-size:3em;
+}
+a{
+  color:inherit;
+}
+form{
+  width:500px;
+  margin:0 auto;
+  background:white;
+  border-radius:10px;
+  margin-bottom:20px;
+  //padding:20px;
+}
+input, .floating-placeholder{
+  font-family:Helvetica, Arial, sans-serif;
+  font-size:20pt;
+  line-height:2.6em;
+  height:2.6em;
+  margin:0;
+  padding:0;
+  width:100%;
+}
+.floating-placeholder input:focus+label{
+  color:$highlight-color;
+}
+.floating-placeholder input[value]+label{
+  color:red;
+}
+.floating-placeholder{
+  position:relative;
+}
+
+.floating-placeholder input{
+  font-size:20pt;
+  border:none;
+  outline:none;
+  position:absolute;
+  top:0;
+  left:0;
+  display:block;
+  background:transparent;
+  z-index:2;
+  border-bottom:1px solid #ccc;
+  text-indent:$padding-horizontal;
+}
+
+.floating-placeholder:last-child input{
+  border-bottom:none;
+}
+.floating-placeholder label{
+  display:block;
+  position:absolute;
+  top:0;
+  left:$padding-horizontal;
+  font-size:20pt;
+  z-index:1;
+  @include transform-origin(0,0.0em);
+  @include transition(transform 160ms, color 200ms);
+  @include transform(scale(1,1) rotateY(0));
+  color:#999;
+}
+.floating-placeholder-float label{
+  @include transform(scale(0.55,0.55) rotateY(0));
+}
+.floating-placeholder-float input{
+  line-height:3.4em;
+}
+
+#button {
+    text-align: center;
+}
+
+body {
+  font-family: 'Open Sans', 'sans-serif';
+  background-image: url(http://benague.ca/files/pw_pattern.png);
+}
+
+/* header */
+h1 {
+  color: #55acee;
+  text-align: center;
+}
+
+/* header/copyright link */
+.link {
+  text-decoration: none;
+  color: #55acee;
+  border-bottom: 2px dotted #55acee;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym46.cur), auto;
+}
+
+.link:hover {
+  color: #2ecc71;
+  border-bottom: 2px dotted #2ecc71;
+}
+
+/* button div */
+#buttons {
+  padding-top: 50px;
+  text-align: center;
+}
+
+/* start da css for da buttons */
+.btn {
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+.btn:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+.red {
+  background-color: #e74c3c;
+  box-shadow: 0px 5px 0px 0px #CE3323;
+}
+
+.red:hover {
+  background-color: #FF6656;
+}

@@ -17,7 +17,8 @@ app.get('/', function(req, res) {
  res.send('Hello Marcus!')
 })
 
-// var data = [ ]
+
+//########################################################################################## -- post data to mongoDB
 
 app.post('/api', function(req, res){   //res.send sends info from server to browser (client)
     
@@ -26,11 +27,8 @@ app.post('/api', function(req, res){   //res.send sends info from server to brow
     const message = req.body.message;
     const product = req.body.product;
     const artist = req.body.artist;
-        const album = req.body.album;
+    const album = req.body.album;
     const genre = req.body.genre;
-
-
-
 
     const data = {
         username: userName,
@@ -48,13 +46,9 @@ app.post('/api', function(req, res){   //res.send sends info from server to brow
     .then(()=> res.send(data)) //reply to browser to say data is saved
     .catch (err => console.log(err)) //if error console log error
    
-    // data.push(temp)
-    // console.log(data)
-
-    // const reply = `${userName} with id of ${userId} is saying ${message}`
-    // res.send(reply)
-
 })
+
+//######################################################### -- show all users
 
 app.get("/getallusers", function(req, res){
 User.find()
@@ -62,9 +56,10 @@ User.find()
     console.log(results)    //result = response just like in a promise
     
     res.send(results)
+})
+})
 
-})
-})
+//########################################################## -- search by username
 
 app.get("/showprofile/:username", function(req, res){    //:username is a parameter and a variable
    const user = req.params.username    //get username from paramater, inside the URL, store in const 'user'
@@ -80,15 +75,15 @@ app.get("/showprofile/:username", function(req, res){    //:username is a parame
 
 })
 
+//############################################################ -- search by artist
 
+app.get("/showartist/:artist", function(req, res){    //:username is a parameter and a variable
+   const artistName = req.params.artist   //get album from paramater, inside the URL, store in const 'user'
+    console.log(artistName)
 
-app.get("/showprofile/:username", function(req, res){    //:username is a parameter and a variable
-   const user = req.params.album   //get album from paramater, inside the URL, store in const 'user'
-    console.log(user)
-
-    User.find({album:user}) //username is the key value is user
+    User.find({artist:artistName}) //username is the key value is user
         .then(result => {
-            console.log("Showing", user, "profile:", result)
+            console.log("Showing", artistName, "profile:", result, artistName)
             res.send(result)
         }).catch(err => {
             console.log(err)
@@ -96,7 +91,37 @@ app.get("/showprofile/:username", function(req, res){    //:username is a parame
 
 })
 
+//################################################################### -- search DB by album
 
+app.get("/showalbum/:album", function(req, res){    //:username is a parameter and a variable
+   const albumName = req.params.album   //get album from paramater, inside the URL, store in const 'user'
+    console.log(albumName)
+
+    User.find({album:albumName}) //username is the key value is user
+        .then(result => {
+            console.log("Showing", albumName, "profile:", result, albumName)
+            res.send(result)
+        }).catch(err => {
+            console.log(err)
+        })
+
+})
+
+//#################################################################### -- search DB by product
+
+app.get("/showproduct/:product", function(req, res){    //:username is a parameter and a variable
+   const productName = req.params.product   //get album from paramater, inside the URL, store in const 'user'
+    console.log(productName)
+
+    User.find({product:productName}) //username is the key value is user
+        .then(result => {
+            console.log("Showing", productName, "profile:", result, productName)
+            res.send(result)
+        }).catch(err => {
+            console.log(err)
+        })
+
+})
 
 
 

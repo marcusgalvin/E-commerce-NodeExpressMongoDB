@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+}
+
+#top-user {
+  margin: 10px;
+  width: 300px;
+  bakckground-color: red
+}
+
+#
+#buttons {
+  display: flex;
+  justify-content: center;
+}
+
+#header {
+text-algin: center;
+
+}
+
+/* #logo {
+background-image: URL('')
+} */
+
+#words1 {
+  text-algin: center;
+
+}
+
+#headers {
+    background-image: URL("recordstore.v1 (1).jpg");
+    height: 500px
+}
+
+
+#buy {
+  background: #3498db;
+  width: 180px;
+  padding: 4px 0;
+    border-radius: 25px;
+
+}
+
+#spacer {
+  width: 190px;
+}
+  
+#gif {
+  /* position: absolute;
+  top: 80px;
+  right: 500px;
+  width: 500px;
+  height: 100px; */
+}
+
+#sell {
+  
+  /* background: #3498db; */
+  width: 200px;
+  height: 200px;
+      opacity: 0.5;
+      background-image: URL('http://www.gamecalls.net/images/products/45rpm_record_game_calls.jpg')
+
+}
+
+
+#logo {
+   width: 200px;
+  height: 200px;
+      opacity: 0.5;
+      background-image: URL('http://cmi-co.com/media/catalog/product/cache/1/thumbnail/100x100/9df78eab33525d08d6e5fb8d27136e95/2/2/22288_av5.jpg');
+      text-algin: center;
+}
+
+
+#headers {
+  display: flex;
+    justify-content: center;
+
+
+}
+  
+#myDIV {
+
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  /* background-color: lightblue; */
+  margin-top: 20px;
+}
+
+#buyDiv{
+
+position: absolute;
+  top: 80px;
+  right: 800px;
+  width: 200px;
+  height: 100px;
+
+} 
+
+#sellDiv{
+position: absolute;
+  top: 80px;
+  right: 275px;
+  width: 250px;
+  height: 100px;
+
+} 
+  
+/* #maindiv {
+  display: flex;
+  justify-content: center;
+} */
+
+
+
+h1{
+  font-size:10em;
+}
+
+input, .floating-placeholder{
+  /* background-color: red; */
+
+
+
+
+
+  margin: auto;
+  font-size:10pt;
+  line-height:2.6em;
+  height:2.6em;
+  margin:0;
+  padding:0;
+  width:100%;
+}
+

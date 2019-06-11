@@ -1,0 +1,145 @@
+<DOCTYPE html>
+
+<head>
+<title>my express app </title>
+<script src = "script.js"></script>
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<link rel ="stylesheet" href="style.css"
+</head>
+
+
+<body>
+
+<!-- ******************************************************* -- POST MUSIC INPUTS -->
+
+<h2 class="header>">- Post Music for Sale -</h2>
+
+<form>
+<div class="floating-placeholder">
+  <input placeholder="User Name" id="user-name" type="text">
+  <!-- <label for="name">Name</label> -->
+</div>
+<div class="floating-placeholder">
+  <input placeholder="Price" id="price" type="number name="quantity" min="1" max="100000"">
+
+  <!-- <label for="address">Address</label> -->
+</div>
+<div class="floating-placeholder">
+  <input placeholder="Product Type (record, cassette, CD, mp3)" id="product" type="text">
+
+  <!-- <label for="city">City</label> -->
+</div>
+<div class="floating-placeholder">
+    <input placeholder="Product Description" id="message" type="text">
+
+  <!-- <label for="password">Password</label> -->
+</div>
+
+<div class="floating-placeholder">
+    <input placeholder="Artist" id="artist" type="text">
+
+  <!-- <label for="password">Password</label> -->
+</div>
+
+<div class="floating-placeholder">
+    <input placeholder="Album" id="album" type="text">
+
+  <!-- <label for="password">Password</label> -->
+</div>
+
+<div class="floating-placeholder">
+    <input placeholder="Genre" id="genre" type="text">
+
+  <!-- <label for="password">Password</label> -->
+</div>
+ 
+<div id="button">
+  <button   class="btn red" onClick="handleSubmit()">Submit</button>
+
+</div>
+
+</form>
+
+
+<!-- *********************************************** - VIEW ALL PRODUCTS -->
+
+<div id="viewall">
+<h3>View All Products</h3>
+<button onclick="getAllUsers()">Get</button>
+<p id="result"></p>
+<div>
+
+
+<!-- *************************************************** - SEARCH BY USER -->
+
+<div class ="searchByUser">
+  <h2>Search Products by User Name</h2>
+
+  <input placeholder="user name" id="userName" type="text">
+  
+  <button onClick="getUserInfo()">Search by Name</button>
+ 
+   <p id="userInfo"></p>
+
+ </div>
+
+
+
+ <!-- *************************************************** - SEARCH BY ALBUM --> 
+
+
+ <div class ="searchByUser">
+  <h2>Search Products by Album Name</h2>
+
+  <input placeholder="albumName" id="albumName" type="text">
+  
+  <button onClick="getAlbumInfo()">Search by Name</button>
+ 
+   <p id="albumInfo"></p>
+
+ 
+ </div>
+
+
+
+<!-- //********************************************************* - search by artist name -->
+<div class ="searchByUser">
+  <h2>Search Products by Artist Name</h2>
+
+  <input placeholder="artistName" id="artistName" type="text">
+  
+  <button onClick="getArtistInfo()">Search by Name</button>
+ 
+   <p id="artistInfo"></p>
+
+ 
+ </div>
+
+<!-- //******************************************************* - search by product -->
+
+<div class ="searchByUser">
+  <h2>Search Products by (CD, record, cassette, mp3)</h2>
+
+  <input placeholder="productName" id="productName" type="text">
+  
+  <button onClick="getProductInfo()">Search by Product</button>
+ 
+   <p id="productInfo"></p>
+
+ 
+ </div>
+
+
+
+<p id = "displayResults"></p>
+
+
+
+
+</body>
+
+
+
+
+</html>
